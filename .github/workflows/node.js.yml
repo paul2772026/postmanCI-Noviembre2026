@@ -16,12 +16,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js 
+    - name: Use Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '22.x'
     - name: install newman
       run: npm install -g newman
     - name: run test
-      run: npm run projects.postman_collection.json
+      run: newman run projects.postman_collection.json
+
    
